@@ -29,7 +29,7 @@ public class MyStepdefs {
     }
 
     @When("I press (\\*|\\/|\\^) key$")
-    public void iPressKey(String arg0) {
+    public void iPressKey(String arg0) throws Exception {
         result = calculator.calculate(value1, value2, arg0);
         System.out.print(result);
     }

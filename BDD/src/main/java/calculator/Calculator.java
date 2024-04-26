@@ -5,7 +5,16 @@ public class Calculator {
         return a + b;
     }
 
-    public int calculate(int value1, int value2, String op) {
-        return 0;
+    public int calculate(int value1, int value2, String op) throws Exception {
+        switch (op){
+            case "*":
+                return value1 * value2;
+            case "/":
+                return value1 / value2;
+            case "^":
+                return (int) Math.pow(value1, value2);
+            default:
+                throw new Exception("Invalid Operation");
+        }
     }
 }
