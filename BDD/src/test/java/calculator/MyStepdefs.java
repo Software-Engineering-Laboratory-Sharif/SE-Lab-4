@@ -28,6 +28,12 @@ public class MyStepdefs {
         System.out.print(result);
     }
 
+    @When("I press (\\*|\\/|\\^) key$")
+    public void iPressKey(String arg0) {
+        result = calculator.calculate(value1, value2, arg0);
+        System.out.print(result);
+    }
+
     @Then("^I expect the result (\\d+)$")
     public void iExpectTheResult(int arg0) {
         Assert.assertEquals(arg0, result);
